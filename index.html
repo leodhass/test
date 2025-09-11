@@ -1758,7 +1758,7 @@
             position: relative;
             height: 4px;
             background: linear-gradient(to right, transparent, #B22222, transparent);
-            margin: 10px 0 20px;
+            margin: 50px 0 40px;
         }
 
             .full-divider::before {
@@ -1902,6 +1902,7 @@
 
         .counter-number.animate {
             animation: pulse 3s ease-in-out infinite;
+            box-shadow: none !important;
         }
 
         .counter-info-text {
@@ -2201,12 +2202,11 @@
                     font-size: 1rem;
                 }
         }
-
         .full-divider {
             position: relative;
             height: 4px;
             background: linear-gradient(to right, transparent, #B22222, transparent);
-            margin: 50px 0 40px;
+            margin: 10px 0 20px;
         }
 
             .full-divider::before {
@@ -3128,6 +3128,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#services">Our Services</a>
                         </li>
+                
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About Us</a>
                         </li>
@@ -3331,6 +3332,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="service-item h-100">
+                        <div class="upcoming-badge">Upcoming</div>
                         <div class="service-image">
                             <img src="assets/images/cpk.jpg" alt="CPK">
                         </div>
@@ -3348,7 +3350,7 @@
                 <!-- Card with upcoming badge -->
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="service-item h-100">
-                        <div class="upcoming-badge">Coming Soon</div>
+                        <div class="upcoming-badge">Upcoming</div>
                         <div class="service-image">
                             <img src="assets/images/alignment.png" alt="CPK">
                         </div>
@@ -3367,7 +3369,7 @@
                 <!-- Another card with upcoming badge -->
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="service-item h-100">
-                        <div class="upcoming-badge">Coming Soon</div>
+                        <div class="upcoming-badge">Upcoming</div>
                         <div class="service-image">
                             <img src="assets/images/oil.png" alt="CPK">
                         </div>
@@ -3672,7 +3674,7 @@
                     <h4>Useful Links</h4>
                     <ul class="menu-list">
                         <li><a href="#services">Our Services</a></li>
-                        <li><a href="#counter">Achievements</a></li>
+              
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#values">Our Values</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -3784,7 +3786,7 @@
 
             if (counterElement && yearElement) {
                 const target = 50000;
-                const duration = 3500;
+                const duration = 1500;
                 const frameRate = 60;
                 const totalFrames = Math.floor(duration / (1000 / frameRate));
                 const increment = target / totalFrames;
@@ -3810,11 +3812,8 @@
                     } else {
                         counterElement.textContent = target.toLocaleString();
                         yearElement.textContent = currentYear;
+                        counterElement.style.filter = 'drop-shadow(0 0 8px rgba(120, 0, 0, 0.9))';
 
-                        counterElement.style.filter = 'drop-shadow(0 0 20px rgba(231, 76, 60, 0.7))';
-                        setTimeout(() => {
-                            counterElement.style.filter = 'none';
-                        }, 3000);
                     }
                 }
 
